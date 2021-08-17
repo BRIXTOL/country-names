@@ -1,0 +1,62 @@
+{
+  "name": "@brixtol/country-names",
+  "version": "0.1.0",
+  "description": "Mappings for 2 letter (Alpha 2) country codes to English country name",
+  "author": {
+    "name": "Νίκος Σαβίδης ",
+    "email": "n@brixtol.com",
+    "url": "https://brixtoltextiles.com"
+  },
+  "license": "MIT",
+  "main": "./package/index.js",
+  "exports": {
+    "require": "./package/index.js",
+    "import": "./package/index.mjs"
+  },
+  "types": "./package/index.d.ts",
+  "keywords": [
+    "countries",
+    "mappings",
+    "country",
+    "3166-1 alpha-2",
+    "ISO 36166"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brixtol/country-names"
+  },
+  "bugs": {
+    "url": "https://github.com/brixtol/country-names"
+  },
+  "node": {},
+  "engines": {
+    "pnpm": ">=5"
+  },
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c --environment prod",
+    "package": "cd versions; pnpm pack ../ && cd ..",
+    "test": "ava --watch --verbose",
+    "postpublish": "npm publish --ignore-scripts --@OWNER:registry='https://registry.npmjs.org'"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ],
+    "files": [
+      "test/*.js"
+    ],
+    "concurrency": 5
+  },
+  "devDependencies": {
+    "@brixtol/rollup-utils": "workspace:^0.2.0",
+    "@brixtol/tsconfig": "workspace:^1.0.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "esm": "^3.2.25",
+    "rollup": "^2.56.2",
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.3.5"
+  }
+}
