@@ -34,13 +34,13 @@ yarn add @brixtol/country-names
 You can pass in a country code that is lowercase, uppercase or a mixture of both.
 
 ```javascript
-import country from "@brixtol/country-names";
+import { getCountryName } from "@brixtol/country-names";
 
 // Country code SE (Sweden)
-const sweden = country("SE");
+const sweden = getCountryName("SE");
 
 // Country code NL (Netherlands)
-const netherlands = country("nl");
+const netherlands = getCountryName("nl");
 
 // ....
 ```
