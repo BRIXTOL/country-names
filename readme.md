@@ -4,8 +4,8 @@ Country code ([3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#
 
 > Mappings returned in the English Language.
 
-Minified: 2.23 KB <br>
-Gzipped: 1.08 KB
+Minified: 4.04 KB <br>
+Gzipped: 2.18 KB
 
 ### Install
 
@@ -31,25 +31,45 @@ yarn add @brixtol/country-names
 
 ### Usage
 
-You can pass in a country code that is lowercase, uppercase or a mixture of both.
+You can pass in a 2 letter country code that is lowercase, uppercase or a mixture of both.
 
 ```javascript
 import { getCountryName } from "@brixtol/country-names";
 
-// Country code SE (Sweden)
-const sweden = getCountryName("SE");
-
-// Country code NL (Netherlands)
-const netherlands = getCountryName("nl");
-
-// ....
+const sweden = getCountryName("SE"); // Sweden
+const netherlands = getCountryName("nl"); // Netherlands
+const usa = getCountryName("uS"); // United States of America
 ```
+
+The module also exposes the raw mappings and interface on the export. The mappings object is provided **read only** using [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
+
+```javascript
+import { Countries, ICountries } from "@brixtol/country-names";
+
+// Mapping Object
+
+Countries.SE; // Sweden
+Countries.NL; // Netherlands
+Countries.RU; // Russia
+
+// Interface
+
+ICountries.SE; // Sweden
+ICountries.NL; // Netherlands
+ICountries.RU; // Russia
+```
+
+> The interface is identical to the mapping
 
 ### Related
 
+Country code to currency code mappings:
+
 - [@brixtol/currency-codes](https://github.com/brixtol/currency-codes)
+
+Currency code to currency symbol mappings:
+
 - [@brixtol/currency-symbols](https://github.com/brixtol/currency-symbols)
-- [@brixtol/currency-symbol-placements](https://github.com/brixtol/currency-symbol-placements)
 
 ### License
 
