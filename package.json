@@ -1,6 +1,6 @@
 {
   "name": "@brixtol/country-names",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Mappings for 2 letter (Alpha 2) country codes to English country name",
   "author": {
     "name": "Νίκος Σαβίδης ",
@@ -11,7 +11,7 @@
   "main": "./package/index.js",
   "exports": {
     "require": "./package/index.js",
-    "import": "./package/index.mjs"
+    "import": "./package/index.es.js"
   },
   "types": "./package/index.d.ts",
   "keywords": [

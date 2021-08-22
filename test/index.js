@@ -1,32 +1,32 @@
 import test from "ava";
-import currency from "../package/index";
+import { getCountryName } from "../package/index";
 
 test("Country code", (t) => {
-  t.is(currency("SE"), "Sweden");
-  t.is(currency("Nl"), "Netherlands");
-  t.is(currency("dE"), "Germany");
-  t.is(currency("us"), "United States of America");
-  t.is(currency("AU"), "Australia");
+  t.is(getCountryName("SE"), "Sweden");
+  t.is(getCountryName("Nl"), "Netherlands");
+  t.is(getCountryName("dE"), "Germany");
+  t.is(getCountryName("us"), "United States of America");
+  t.is(getCountryName("AU"), "Australia");
 
   t.pass();
 });
 
 test("Country code in uppercase", (t) => {
-  t.is(currency("SE"), "Sweden");
-  t.is(currency("NL"), "Netherlands");
-  t.is(currency("DE"), "Germany");
-  t.is(currency("US"), "United States of America");
-  t.is(currency("AU"), "Australia");
+  t.is(getCountryName("SE"), "Sweden");
+  t.is(getCountryName("NL"), "Netherlands");
+  t.is(getCountryName("DE"), "Germany");
+  t.is(getCountryName("US"), "United States of America");
+  t.is(getCountryName("AU"), "Australia");
 
   t.pass();
 });
 
 test("Country code in lowercase", (t) => {
-  t.is(currency("se"), "Sweden");
-  t.is(currency("nl"), "Netherlands");
-  t.is(currency("de"), "Germany");
-  t.is(currency("us"), "United States of America");
-  t.is(currency("au"), "Australia");
+  t.is(getCountryName("se"), "Sweden");
+  t.is(getCountryName("nl"), "Netherlands");
+  t.is(getCountryName("de"), "Germany");
+  t.is(getCountryName("us"), "United States of America");
+  t.is(getCountryName("au"), "Australia");
 
   t.pass();
 });
