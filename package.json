@@ -1,6 +1,6 @@
 {
   "name": "@brixtol/country-names",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Mappings for 2 letter (Alpha 2) country codes to English country name",
   "author": {
     "name": "Νίκος Σαβίδης ",
@@ -36,8 +36,11 @@
     "dev": "rollup -c -w",
     "build": "rollup -c --environment prod",
     "package": "cd versions; pnpm pack ../ && cd ..",
-    "test": "ava --watch --verbose",
-    "postpublish": "npm publish --ignore-scripts --@OWNER:registry='https://registry.npmjs.org'"
+    "test": "ava --watch --verbose"
+  },
+  "eslintConfig": {
+    "ignorePatterns": "package",
+    "extends": "@brixtol/eslint-config"
   },
   "ava": {
     "require": [
@@ -49,8 +52,10 @@
     "concurrency": 5
   },
   "devDependencies": {
-    "@brixtol/rollup-utils": "workspace:^0.2.0",
-    "@brixtol/tsconfig": "workspace:^1.0.0",
+    "@brixtol/eslint-config": "^1.0.1",
+    "@brixtol/prettier-config": "^1.0.3",
+    "@brixtol/rollup-utils": "^0.2.0",
+    "@brixtol/tsconfig": "^1.0.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "esm": "^3.2.25",
     "rollup": "^2.56.2",
