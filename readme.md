@@ -50,13 +50,13 @@ import { Countries, ICountries } from "@brixtol/country-names";
 
 Countries.SE; // Sweden
 Countries.NL; // Netherlands
-Countries.RU; // Russia
+Countries.RU; // Russian Federation
 
 // Interface
 
 ICountries.SE; // Sweden
 ICountries.NL; // Netherlands
-ICountries.RU; // Russia
+ICountries.RU; // Russian Federation
 ```
 
 > The interface is identical to the mapping
