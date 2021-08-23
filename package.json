@@ -38,6 +38,7 @@
     "package": "cd versions; pnpm pack ../ && cd ..",
     "test": "ava --watch --verbose"
   },
+  "prettier": "@brixtol/prettier-config",
   "eslintConfig": {
     "ignorePatterns": "package",
     "extends": "@brixtol/eslint-config"

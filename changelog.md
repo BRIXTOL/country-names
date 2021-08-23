@@ -1,5 +1,9 @@
 ## _CHANGELOG_
 
+### 1.1.1 - 23/08/2021
+
+Extend prettier config in `package.json` file and align readme.
+
 ### 1.1.0 - 23/08/2021
 
 Mostly development space adjustments, no code was modified, aside from the eslint formats that were applied to source. In addition, the module also exposes the mapping object on the exports.
