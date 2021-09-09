@@ -1,5 +1,9 @@
 ## _CHANGELOG_
 
+### 1.1.2 - 10/09/2021
+
+Replaced development rollup dependencies to use [@brixtol/rollup-config](https://github.com/BRIXTOL/rollup-config)
+
 ### 1.1.1 - 23/08/2021
 
 Extend prettier config in `package.json` file and align readme.
@@ -22,9 +26,9 @@ Dropped support of default exports. This module uses named exports. The module t
 ##### Named export
 
 ```js
-import { getCountryName } from "@brixtol/country-names";
+import { getCountryName } from '@brixtol/country-names';
 
-const country = getCountryName("SE"); // Sweden
+const country = getCountryName('SE'); // Sweden
 ```
 
 ##### Breakdown
