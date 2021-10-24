@@ -1,6 +1,6 @@
 {
   "name": "@brixtol/country-names",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Mappings for 2 letter (Alpha 2) country codes to English country name",
   "author": {
     "name": "Νίκος Σαβίδης ",
@@ -54,8 +54,8 @@
   },
   "devDependencies": {
     "@brixtol/eslint-config": "^1.0.1",
-    "@brixtol/prettier-config": "workspace:^1.1.0",
-    "@brixtol/rollup-config": "workspace:^1.2.0",
+    "@brixtol/prettier-config": "workspace:^1.2.0",
+    "@brixtol/rollup-config": "workspace:^1.4.0",
     "@brixtol/tsconfig": "^1.0.0",
     "esm": "^3.2.25",
     "typescript": "^4.3.5"

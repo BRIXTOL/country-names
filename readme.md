@@ -34,17 +34,17 @@ yarn add @brixtol/country-names
 You can pass in a 2 letter country code that is lowercase, uppercase or a mixture of both.
 
 ```javascript
-import { getCountryName } from "@brixtol/country-names";
+import { getCountryName } from '@brixtol/country-names';
 
-const sweden = getCountryName("SE"); // Sweden
-const netherlands = getCountryName("nl"); // Netherlands
-const usa = getCountryName("uS"); // United States of America
+const sweden = getCountryName('SE'); // Sweden
+const netherlands = getCountryName('nl'); // Netherlands
+const usa = getCountryName('uS'); // United States of America
 ```
 
 The module also exposes the raw mappings and interface on the export. The mappings object is provided **read only** using [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
 
 ```javascript
-import { Countries, ICountries } from "@brixtol/country-names";
+import { Countries, ICountries, CountryCodes } from '@brixtol/country-names';
 
 // Mapping Object
 
@@ -57,6 +57,10 @@ Countries.RU; // Russian Federation
 ICountries.SE; // Sweden
 ICountries.NL; // Netherlands
 ICountries.RU; // Russian Federation
+
+// Country Codes
+
+CountryCodes: // SE | NL | RU etc etc
 ```
 
 > The interface is identical to the mapping

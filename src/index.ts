@@ -493,6 +493,11 @@ export interface ICountries {
   ZW: 'Zimbabwe';
 }
 
+/**
+ * Country code Keys (3166-1 alpha-2)
+ */
+export type CountryCodes<T = keyof ICountries> = T
+
 export const Countries: ICountries = Object.freeze({
   AD: 'Andorra',
   AE: 'United Arab Emirates',
@@ -747,4 +752,4 @@ export const Countries: ICountries = Object.freeze({
  *
  * _Accepts either uppercase or lowercase_
  */
-export const getCountryName = (code: keyof ICountries): string => Countries[code.toUpperCase()];
+export const getCountryName = (code: CountryCodes): string => Countries[code.toUpperCase()];

@@ -1,5 +1,9 @@
 ## _CHANGELOG_
 
+### 1.2.0 - 24/10/2021
+
+- Added `CountryCodes` type export
+
 ### 1.1.2 - 10/09/2021
 
 Replaced development rollup dependencies to use [@brixtol/rollup-config](https://github.com/BRIXTOL/rollup-config)
