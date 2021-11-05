@@ -12,6 +12,15 @@ test('Country code', (t) => {
   t.pass();
 });
 
+test('Country code is invalid', (t) => {
+
+  t.throws(() => getCountryName('WW'), {
+    message: '"WW" is an invalid ISO country code'
+  });
+
+  t.pass();
+});
+
 test('Country code in uppercase', (t) => {
 
   t.is(getCountryName('SE'), 'Sweden');
