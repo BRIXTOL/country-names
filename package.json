@@ -1,6 +1,6 @@
 {
   "name": "@brixtol/country-names",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Mappings for 2 letter (Alpha 2) country codes to English country name",
   "author": {
     "name": "Νίκος Σαβίδης ",
@@ -36,12 +36,16 @@
     "dev": "rollup -c -w",
     "build": "rollup -c --environment prod",
     "package": "cd versions; pnpm pack ../ && cd ..",
-    "test": "ava --watch --verbose"
+    "test": "ava --watch --verbose",
+    "test:build": "ava --verbose"
   },
   "prettier": "@brixtol/prettier-config",
   "eslintConfig": {
     "ignorePatterns": "package",
-    "extends": "@brixtol/eslint-config"
+    "extends": "@brixtol/eslint-config",
+    "rules": {
+      "no-unused-vars": "off"
+    }
   },
   "ava": {
     "require": [

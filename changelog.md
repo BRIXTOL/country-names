@@ -1,5 +1,14 @@
 ## _CHANGELOG_
 
+### 1.2.1 - 05/11/2021
+
+Improved type support and provided error handling for when invalid or incorrect ISO codes are provided.
+
+- Added literal union support for argument `code`
+- Added type support for country name reference of return
+- Added error support when an unmatched ISO is provided
+- Appended "(DPRK)" to "North Korea" country name.
+
 ### 1.2.0 - 24/10/2021
 
 - Added `CountryCodes` type export
