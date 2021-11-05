@@ -1,4 +1,4 @@
-export interface ICountries {
+interface ICountries {
   /** Andorra */
   AD: 'Andorra';
   /** United Arab Emirates */
@@ -51,7 +51,7 @@ export interface ICountries {
   BL: 'Saint Barthelemy';
   /** Bermuda */
   BM: 'Bermuda';
-  /** Bolivia, Plurinational State */
+  /** Bolivia; Plurinational State */
   BO: 'Bolivia';
   /** Bonaire Sint Eustatius And Saba */
   BQ: 'Bonaire, Sint Eustatius and Saba';
@@ -236,7 +236,7 @@ export interface ICountries {
   /** Saint Kitts And Nevis */
   KN: 'Saint Kitts and Nevis';
   /** North Korea */
-  KP: 'North Korea,';
+  KP: 'North Korea (DPRK)';
   /** Korea The Republic Of */
   KR: 'South Korea';
   /** Kuwait  */
@@ -469,9 +469,9 @@ export interface ICountries {
   VA: 'Holy See';
   /** Saint Vincent And The Grenadines */
   VC: 'Saint Vincent and the Grenadines';
-  /** Virgin Islands, British */
+  /** Virgin Islands; British */
   VG: 'Virgin Islands, British';
-  /** Virgin Islands, U.S */
+  /** Virgin Islands; U.S */
   VI: 'Virgin Islands, U.S';
   /** Viet Nam */
   VN: 'Viet Nam';
@@ -496,9 +496,39 @@ export interface ICountries {
 /**
  * Country code Keys (3166-1 alpha-2)
  */
-export type CountryCodes<T = keyof ICountries> = T
+type CountryCodes<T = keyof ICountries> = T
 
-export const Countries: ICountries = Object.freeze({
+/**
+ * Literal Union Helper
+ *
+ * Allows string types to be passed while respecting
+ * intellisense completions.
+ */
+type Union<T, B extends | null | undefined | string | symbol> = T | (B & {_?: never})
+
+/**
+ * Object Values
+ *
+ * Creates a union of country name values used as a return
+ * type in function export.
+ */
+type Values<T, V extends keyof T = keyof T> = T[V];
+
+/**
+ * Country Name
+ *
+ * Extracts the country name from the ICountries interface
+ * which is use as the Return type reference
+ */
+type CountryName<ISO extends CountryCodes> = Values<ICountries, ISO>
+
+/**
+ * Countries Map
+ *
+ * Country code (ISO 3166-1 alpha-2) to country name
+ * **Readonly** object.
+ */
+const Countries: Readonly<ICountries> = Object.freeze({
   AD: 'Andorra',
   AE: 'United Arab Emirates',
   AF: 'Afghanistan',
@@ -617,7 +647,7 @@ export const Countries: ICountries = Object.freeze({
   KI: 'Kiribati',
   KM: 'Comoros',
   KN: 'Saint Kitts and Nevis',
-  KP: 'North Korea,',
+  KP: 'North Korea (DPRK)',
   KR: 'South Korea',
   KW: 'Kuwait',
   KY: 'Cayman Islands',
@@ -748,8 +778,25 @@ export const Countries: ICountries = Object.freeze({
 });
 
 /**
- * 2 Letter (Alpha 2) country code
+ * Get Country Name
  *
- * _Accepts either uppercase or lowercase_
+ * Requires a 2 Letter (ISO 3166-1 alpha-2) country
+ * code to be passed and returns the country name
+ * in English.
+ *
+ * > _Accepts either uppercase, lowercase or
+ * or a combination of either_
  */
-export const getCountryName = (code: CountryCodes): string => Countries[code.toUpperCase()];
+function getCountryName <ISO extends CountryCodes> (
+  code: Union<ISO, string>
+): CountryName<ISO> {
+
+  const country = Countries[code.toUpperCase()];
+
+  if (!country) throw new Error(`"${code}" is an invalid ISO country code`);
+
+  return country;
+
+}
+
+export { ICountries, Countries, CountryCodes, getCountryName };
