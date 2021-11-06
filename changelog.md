@@ -8,6 +8,8 @@ Improved type support and provided error handling for when invalid or incorrect 
 - Added type support for country name reference of return
 - Added error support when an unmatched ISO is provided
 - Appended "(DPRK)" to "North Korea" country name.
+- Added const enum `Country` export which uses Country Names to map ISO codes
+- Exposed ISO code Union type to export
 
 ### 1.2.0 - 24/10/2021
 
