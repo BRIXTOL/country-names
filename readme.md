@@ -41,10 +41,22 @@ const netherlands = getCountryName('nl'); // Netherlands
 const usa = getCountryName('uS'); // United States of America
 ```
 
-The module also exposes the raw mappings and interface on the export. The mappings object is provided **read only** using [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
+TypeScript users can leverage the `Country` const enum export which is a Country Name to ISO Code mapping (reverse). Country names are expressed in upcase format and can be passed as follows:
 
-```javascript
-import { Countries, ICountries, CountryCodes } from '@brixtol/country-names';
+```typescript
+import { getCountryName, Country } from '@brixtol/country-names';
+
+const sweden = getCountryName(Country.Sweden); // Sweden
+const netherlands = getCountryName(Country.Netherlands); // Netherlands
+const usa = getCountryName(Country.UnitedStatesOfAmerica); // United States of America
+```
+
+###### EXTRAS
+
+The module also exposes the raw mappings and interface on the export. The mappings object is provided **read only** using [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze). In addition to the raw mappings a ISO code union export is also exposed.
+
+```ts
+import { Countries, ICountries, CountryCodes, Country } from '@brixtol/country-names';
 
 // Mapping Object
 
@@ -58,9 +70,15 @@ ICountries.SE; // Sweden
 ICountries.NL; // Netherlands
 ICountries.RU; // Russian Federation
 
-// Country Codes
+// Country Code Union
 
-CountryCodes: // SE | NL | RU etc etc
+CountryCodes<'SE' | 'NL' | 'RU'>; // etc etc
+
+// Country Name Enumerable
+
+Country.Sweden; // SE
+Country.RussianFederation; // RU
+Country.Netherlands; // NL
 ```
 
 > The interface is identical to the mapping
