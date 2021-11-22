@@ -4,18 +4,16 @@ Country code ([3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#
 
 > Mappings returned in the English Language.
 
-Minified: 4.04 KB <br>
-Gzipped: 2.18 KB
+Minified: 4.15 KB <br>
+Gzipped: 2.25 KB
 
 ### Install
 
 [pnpm](https://pnpm.js.org/en/cli/install)
 
 ```cli
-pnpm i @brixtol/country-names
+pnpm add @brixtol/country-names
 ```
-
-##### Boomer / Sheep Alternatives
 
 [npm](https://www.npmjs.com/)
 
@@ -41,16 +39,6 @@ const netherlands = getCountryName('nl'); // Netherlands
 const usa = getCountryName('uS'); // United States of America
 ```
 
-TypeScript users can leverage the `Country` const enum export which is a Country Name to ISO Code mapping (reverse). Country names are expressed in upcase format and can be passed as follows:
-
-```typescript
-import { getCountryName, Country } from '@brixtol/country-names';
-
-const sweden = getCountryName(Country.Sweden); // Sweden
-const netherlands = getCountryName(Country.Netherlands); // Netherlands
-const usa = getCountryName(Country.UnitedStatesOfAmerica); // United States of America
-```
-
 ###### EXTRAS
 
 The module also exposes the raw mappings and interface on the export. The mappings object is provided **read only** using [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze). In addition to the raw mappings a ISO code union export is also exposed.
@@ -74,16 +62,15 @@ ICountries.RU; // Russian Federation
 
 CountryCodes<'SE' | 'NL' | 'RU'>; // etc etc
 
-// Country Name Enumerable
-
-Country.Sweden; // SE
-Country.RussianFederation; // RU
-Country.Netherlands; // NL
 ```
 
 > The interface is identical to the mapping
 
 ### Related
+
+Static GeoIP utility
+
+- [@brixtol/i18n](https://github.com/brixtol/i18n)
 
 Country code to currency code mappings:
 
