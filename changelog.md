@@ -1,5 +1,13 @@
 ## _CHANGELOG_
 
+### 1.2.2 - 21/11/2021
+
+- Minor internal updates
+- Moved to esbuild minifier
+- pnpm linked dependencies
+- dropped const enum `Country` export
+- Updated docs
+
 ### 1.2.1 - 05/11/2021
 
 Improved type support and provided error handling for when invalid or incorrect ISO codes are provided.
