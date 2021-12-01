@@ -1,5 +1,15 @@
 ## _CHANGELOG_
 
+### 1.4.0 - 01/12/2021
+
+- Fixed `KG` (Kyrgyzstan)
+- Changes `Saint Barthelemy` to official name `Saint Barthélemy`
+
+### 1.2.4 - 24/11/2021
+
+- Added `XK` (Republic of Kosovo)
+- Added `BN` (Brunei Darussalam)
+
 ### 1.2.2 - 21/11/2021
 
 - Minor internal updates
