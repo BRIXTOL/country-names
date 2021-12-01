@@ -50,9 +50,11 @@ export interface ICountries {
   /** Benin */
   BJ: 'Benin';
   /** Saint Barthelemy */
-  BL: 'Saint Barthelemy';
+  BL: 'Saint Barthélemy';
   /** Bermuda */
   BM: 'Bermuda';
+  /** Brunei Darussalam */
+  BN: 'Brunei Darussalam';
   /** Bolivia; Plurinational State */
   BO: 'Bolivia';
   /** Bonaire Sint Eustatius And Saba */
@@ -227,8 +229,8 @@ export interface ICountries {
   JP: 'Japan';
   /** Kenya */
   KE: 'Kenya';
-  /** Kazakhstan */
-  KG: 'Kazakhstan';
+  /** Kyrgyzstan */
+  KG: 'Kyrgyzstan';
   /** Cambodia */
   KH: 'Cambodia';
   /** Kiribati */
@@ -483,6 +485,8 @@ export interface ICountries {
   WF: 'Wallis and Futuna';
   /** Samoa */
   WS: 'Samoa';
+  /** Republic of Kosovo */
+  XK: 'Republic of Kosovo';
   /** Yemen */
   YE: 'Yemen';
   /** Mayotte */
@@ -564,6 +568,8 @@ export type CountryCodes = (
  'BL' |
  /** Bermuda */
  'BM' |
+ /** Brunei Darussalam */
+ 'BN' |
  /** Bolivia | Plurinational State */
  'BO' |
  /** Bonaire Sint Eustatius And Saba */
@@ -992,6 +998,8 @@ export type CountryCodes = (
  'VU' |
  /** Wallis And Futuna */
  'WF' |
+  /** Republic of Kosovo */
+ 'XK' |
  /** Samoa */
  'WS' |
  /** Yemen */
@@ -1049,8 +1057,9 @@ export const Countries: Readonly<ICountries> = Object.freeze({
   BH: 'Bahrain',
   BI: 'Burundi',
   BJ: 'Benin',
-  BL: 'Saint Barthelemy',
+  BL: 'Saint Barthélemy',
   BM: 'Bermuda',
+  BN: 'Brunei Darussalam',
   BO: 'Bolivia',
   BQ: 'Bonaire, Sint Eustatius and Saba',
   BR: 'Brazil',
@@ -1138,7 +1147,7 @@ export const Countries: Readonly<ICountries> = Object.freeze({
   JO: 'Jordan',
   JP: 'Japan',
   KE: 'Kenya',
-  KG: 'Kazakhstan',
+  KG: 'Kyrgyzstan',
   KH: 'Cambodia',
   KI: 'Kiribati',
   KM: 'Comoros',
@@ -1265,6 +1274,7 @@ export const Countries: Readonly<ICountries> = Object.freeze({
   VN: 'Viet Nam',
   VU: 'Vanuatu',
   WF: 'Wallis and Futuna',
+  XK: 'Republic of Kosovo',
   WS: 'Samoa',
   YE: 'Yemen',
   YT: 'Mayotte',
