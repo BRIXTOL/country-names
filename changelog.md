@@ -1,6 +1,6 @@
 ## _CHANGELOG_
 
-### 1.4.0 - 01/12/2021
+### 1.4.1 - 01/12/2021
 
 - Fixed `KG` (Kyrgyzstan)
 - Changes `Saint Barthelemy` to official name `Saint Barthélemy`
